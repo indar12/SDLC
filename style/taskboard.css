@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+.add-task,
+.add-tasks {
+  display: flex;
+  justify-content: space-around;
+}
+
+html,
+body {
+  background-color: lightpink;
+  height: 100%;
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.board-layout {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+.change {
+  display: flex;
+}
+
+#close,
+#submit {
+  background-color: pink;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 3%;
+}
+
+.edit {
+  padding-left: 5%;
+}
+
+.fa-filter {
+  width: 4rem;
+}
+
+.list {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  height: 100%;
+  margin: 0 2rem;
+  max-width: 25rem;
+  min-height: 10rem;
+  min-width: 15rem;
+  padding: 1rem;
+  transition: all 0.2s linear;
+  width: 100%;
+}
+
+.lists {
+  display: flex;
+  flex: 1;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.list-item {
+  background-color: #f3f3f3;
+  border-radius: 0.5rem;
+  margin: 1rem 1rem;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+.logout-button {
+  background: blue;
+  color: white;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  padding: 10%;
+}
+
+.logout-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.logout-content {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 5%;
+  width: 5%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main#blur.active {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+::placeholder {
+  color: white;
+}
+
+::placeholder {
+  color: black;
+}
+
+#popup,
+#popups {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  left: 50%;
+  opacity: 0;
+  padding: 5rem;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  visibility: hidden;
+  width: 50%;
+}
+
+#popup.active,
+#popups.active {
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+}
+
+.taskboard-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.taskboard-content {
+  background-color: black;
+  box-shadow: 1px 1px 10px 10px #8eb0d4;
+  color: white;
+  font-family: serif;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.task-add-button {
+  cursor: pointer;
+  height: 2.2rem;
+  margin-left: 5rem;
+  width: 8%;
+}
+
+.task-status {
+  background-color: blue;
+  border-radius: 4px;
+  text-align: end;
+  width: 100%;
+}
+
+.taskStatus {
+  background-color: blue;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+}
+
+.task-filter-button {
+  background-color: blue;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  font-size: 48px;
+  outline: none;
+  position: absolute;
+}
+
+.task-filter-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.task-filter-content {
+  color: white;
+}
+
+.task-filter-input {
+  background: #e7c7;
+  border-radius: 7px;
+  border: none;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  height: 3rem;
+  outline: none;
+  padding: 5%;
+  width: 35rem;
+}
+
+.task-sort-button {
+  background-color: blue;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  font-size: 48px;
+  margin-left: 4.5rem;
+  outline: none;
+  position: absolute;
+  width: 4rem;
+}
+
+.task-submit,
+.task-submits {
+  margin-top: 1.2rem;
+}
+
+.task-endDate,
+.task-startDate,
+.task-input,
+.task-endDates,
+.task-startDates,
+.task-inputs {
+  background-color: pink;
+  color: black;
+}
+
+.status{
+  padding-left: 5%;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

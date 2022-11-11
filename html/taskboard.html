@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner</title>
+    <link rel="stylesheet" href="../style/taskboard.css" />
+    <link rel="icon" type="image/x-icon" href="../Assests/favicon.jpg">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="main" id="blur">
+      <div class="logout-container">
+        <div class="logout-content">
+          <button class="logout-button" onclick="replaceToLoginPage()">
+            Logout
+          </button>
+        </div>
+      </div>
+      <div class="taskboard-container">
+        <div>
+          <p class="taskboard-content">Planner Taskboard</p>
+        </div>
+      </div>
+      <div class="task-filter-container">
+        <div class="task-filter-content">
+          <div id="task-filter-form" class="task-filter-form">
+            <input
+              class="task-filter-input"
+              type="text"
+              placeholder="Type the task to filter"
+            />
+            <button class="task-filter-button">
+              <i class="fa-solid fa-filter"></i>
+            </button>
+            <button class="task-sort-button">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="board-layout">
+        <div class="lists">
+          <div class="list">
+            <div class="task-add-header">
+              <h2 class="task-status">
+                Not Started
+                <button class="task-add-button">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </h2>
+            </div>
+            <div class="taskContainer" id="not-started"></div>
+          </div>
+          <div class="list">
+            <div class="task-add-header">
+              <h2 class="taskStatus">In-Progress</h2>
+            </div>
+            <div class="taskContainer" id="in-progress"></div>
+          </div>
+          <div class="list">
+            <div class="task-add-header">
+              <h2 class="taskStatus task-status">Completed</h2>
+            </div>
+            <div class="taskContainer" id="completed"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup">
+      <div class="add-task">
+        <div class="task-name">
+          <label>Task Name:</label>
+          <input type="text" class="task-input" placeholder="Enter the task" />
+        </div>
+        <div class="task-start-date">
+          <label>Start Date:</label>
+          <input class="task-startDate" type="date" />
+        </div>
+        <div class="task-end-date">
+          <label>End Date:</label>
+          <input class="task-endDate" type="date" />
+        </div>
+        <div class="task-submit">
+          <button id="close">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div id="popups">
+      <div class="add-tasks">
+        <div class="task-names">
+          <label>Task Name:</label>
+          <input type="text" class="task-inputs" placeholder="Enter the task" />
+        </div>
+        <div class="task-start-dates">
+          <label>Start Date:</label>
+          <input class="task-startDates" type="date" />
+        </div>
+        <div class="task-end-dates">
+          <label>End Date:</label>
+          <input class="task-endDates" type="date" />
+        </div>
+        <div class="task-submits">
+          <button id="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="../script/taskboard.js"></script>
+  </body>
+</html>

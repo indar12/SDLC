@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="icon" type="image/x-icon" href="../Assests/favicon.jpg">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="top-section">
+        <div class="logout-container">
+          <div class="logout-content">
+            <button class="logout-button" onclick="replaceToLoginPage()">
+              Logout
+            </button>
+          </div>
+        </div>
+        <div class="dashboard-container">
+          <div>
+            <p class="dashboard-content">Planner Dashboard</p>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <div class="project-card-container" id="project-card-container">
+          <div class="project-card-content">
+            <form class="projectCreate-form" id="projectCreate-form">
+              <input
+                class="projectName-input"
+                type="text"
+                placeholder="Add a New Project"
+              />
+              <button
+                class="projectCreate-button"
+                type="submit"
+                onclick="validateProjectName()"
+              >
+                <i class="fa-solid fa-check project-btn"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="card"></div>
+      </div>
+    </div>
+    <script src="../script/dashboard.js"></script>
+  </body>
+</html>
